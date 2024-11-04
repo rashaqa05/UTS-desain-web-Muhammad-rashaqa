@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-pink-tua: #F0A8D0;
+    --color-pink-muda: #F7B5CA;
+    --color-pink-terang: #F7B5CA;
+    --color-cream: #FFEBD4;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-yellow: #d3b000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--color-black);
+    background-color: var(--color-cream);
+}
+
+.navbar-container {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    background: var(--color-pink-tua);
+    padding: 1.4rem 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.8);
+}
+
+.navbar-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--color-black);
+}
+
+.navbar-title img {
+    width: 100px;
+}
+
+.navbar-title span{
+    color: var(--color-cream);
+}
+.navbar-list {
+    font-size: 23px;
+    font-weight: 600;
+    display: flex;
+}
+
+.navbar-list a{
+    margin: 0 1rem;
+    font-size: 500;
+    color: var(--color-black);
+}
+
+.home-container {
+    background-color: var(--color-pink-muda);
+    min-height: 100vh;
+    background-image: url(/Donrash/Gambar/Don’rash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-box {
+    display: block;
+    height: 100vh;
+    padding-top: 40vh;
+    margin: 0px 150px;
+}
+
+.home-box h1{
+    color: var(--color-white);
+    font-size: 5rem;
+}
+.home-box h1 span {
+    color: var(--color-black);
+}
+.home-box p {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--color-white);
+}
+.home-box button {
+    width: 13%;
+    font-size: 25px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-pink-tua);
+}
+
+.home-box a {
+    font-weight: 600;
+    padding: 10px;
+    color: var(--color-black);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Products */
+#Product {
+    min-height: 1500px;
+    text-align: center;
+}
+.product-title {
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 10rem 7% 1.4rem;
+}
+
+.product-container {
+    justify-content: center;
+    text-align: center;
+    margin: 0 30px;
+}
+
+.productbar-left {
+    width: 20%;
+}
+.productbar-mid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    gap: 20px;
+}
+
+.mid-item {
+    background-color: var(--color-pink-terang);
+    width: 300px;
+    border-radius: 15px;
+    border: 2px solid var(--color-black); 
+}
+.mid-item img {
+    width: 200px;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+.mid-item h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+}
+
+.mid-item .p-harga {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.mid-item button {
+    background-color: rebeccapurple;
+    font-size: 20px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    color: var(--color-white);
+    cursor: pointer;
+}
+.productbar-right {
+    width: 20%;
+}
+
+    /* Style keranjang */
+    #cart {
+        margin-top: 30px;
+        width: 300px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }  
+#cart-items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 15px;
+        text-align: left;
+    }  
+#cart-items li {
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+#total-price {
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+}  
+#cart button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 5px;
+}  
+#cart button:hover {
+        background-color: #c82333;
+}  
+      /* Style untuk tombol checkout */
+#checkout-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        font-size: 14px;
+}
+#checkout-btn:hover {
+        background-color: #0069d9;
+}
+#success-message {
+        display: none;
+        margin-top: 20px;
+        padding: 15px;
+        color: #155724;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        border-radius: 5px;
+        width: 300px;
+        text-align: center;
+}
+
+.contact {
+    display: block;
+    align-items: center;
+    justify-content: center;text-align: center;
+}
+
+.contact h1{
+    font-size: 2rem;
+}
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 200px;
+    background-color: var(--color-pink-muda);
+}
+
+.contact-1 {
+    padding: 20px 100px;
+    width: 50%;
+    color: var(--color-black);
+    text-align: start;
+}
+
+.contact-2 {
+    text-align: center;
+    width: 50%;
+}
+
+.media {
+    margin-top: 20px;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.media a {
+    border: 2px solid var(--color-black);
+    color: var(--color-black);
+    background-color: var(--color-cream);
+    padding: 10px;
+    border-radius: 15px;
+}
+.h4-ct {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-black);
+    padding: 15px 0px;
+    color: var(--color-white);
+}
+
+.aboutus {
+    margin-top: 10rem;
+    padding: 0px 50px;
+}
+
+.aboutus h1 {
+    font-size: 5rem;
+}
+
+iframe {
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.abouth1 {
+    margin-top: 30px;
+    font-size: 3rem;
+    padding-left: 50px;
+}
